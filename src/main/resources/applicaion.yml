@@ -6,3 +6,7 @@ spring:
 aws:
   access-key:ASDF
   secret-key:QWER
+
+db:
+  username: root
+  password: pw
