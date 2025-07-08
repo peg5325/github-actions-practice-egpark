@@ -1,0 +1,10 @@
+spring:
+  application:
+    name:
+      github-actions-practice
+
+aws:
+  access-key:ASDF
+  secret-key:QWER
+
+db:
