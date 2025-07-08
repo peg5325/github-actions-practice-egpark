@@ -6,5 +6,3 @@ spring:
 aws:
   access-key:ASDF
   secret-key:QWER
-
-db:
