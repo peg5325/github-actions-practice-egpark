@@ -21,7 +21,7 @@ jobs:
           script_stop: true
           script: |
             cd /home/ubuntu/github-actions-practice-egpark
-            rm -rf src/main/resources/applicaion.yml
+            rm -rf src/main/resources/applicaiton.yml
             git pull origin main
             echo "$APPLICAIONT_PROPERTIES" > src/main/resources/applicaion.yml
             ./gradlew clean build
