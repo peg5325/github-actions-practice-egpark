@@ -31,7 +31,7 @@ jobs:
         run: tar -czvf $GITHUB_SHA.tar.gz project.jar appspec.yml scripts
 
       - name: AWS Resources 에 접근할 수 있게 AWS Credentials 설정
-        uses: aws-actions/configure-aws-credentails@v4
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-northeast-2
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
