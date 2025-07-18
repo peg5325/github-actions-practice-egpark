@@ -9,11 +9,17 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: application.yml 파일 만들기
-        run: echo "${{ secrets.APPLICATION_PROPERTIES_ECHO_TEST }}" > ./application.yml
+#      - name: application.yml 파일 만들기
+#        run: echo "${{ secrets.APPLICATION_PROPERTIES_ECHO_TEST }}" > ./application.yml
+#
+#      - name: application-test.yml 파일 만들기
+#        run: echo "${{ secrets.APPLICATION_TEST_PROPERTIES_ECHO_TEST }}" > ./application-test.yml
 
       - name: application-test.yml 파일 만들기
-        run: echo "${{ secrets.APPLICATION_TEST_PROPERTIES_ECHO_TEST }}" > ./application-test.yml
+        run: printf "%s\n" "${{ secrets.APPLICATION_TEST_PROPERTIES_ECHO_TEST }}" > ./application-test.yml
+
+      - name: application.yml 파일 만들기
+        run: printf "%s\n" "${{ secrets.APPLICATION_PROPERTIES_ECHO_TEST }}" > ./application.yml
 
       - name: application-test.yml 파일 내용 확인
         run: cat ./application-test.yml
