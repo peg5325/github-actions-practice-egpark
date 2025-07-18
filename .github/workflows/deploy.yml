@@ -16,10 +16,10 @@ jobs:
         run: echo "${{ secrets.APPLICATION_TEST_PROPERTIES_ECHO_TEST }}" > ./application-test.yml
 
       - name: application-test.yml 파일 내용 확인
-        run: cat ./src/main/resources/application-test.yml
+        run: cat ./application-test.yml
 
       - name: application.yml 파일 내용 확인
-        run: cat ./src/main/resources/application.yml
+        run: cat ./application.yml
 
 
 #      - name: Github Repository 파일 불러오기
